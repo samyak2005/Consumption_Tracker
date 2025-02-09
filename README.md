@@ -64,8 +64,5 @@ A simple web-based application to track cigarette and alcohol consumption. The a
 - Graphs and analytics for long-term tracking.
 - Mobile app version.
 
-## 📜 License
-This project is open-source under the MIT License.
-
 ---
 💡 **Stay motivated and reduce smoking & drinking for a healthier life!** 🚭🍻
