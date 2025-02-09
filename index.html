@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consumption Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="container">        
+        <div class="toggle-buttons">
+            <button onclick="showTracker()" class="toggle-btn">Tracker</button>
+            <button onclick="showCalendar()" class="toggle-btn">Calendar</button>
+            <button onclick="openGoalPopup()" class="toggle-btn">Set Limit</button>
+            
+
+        </div>
+        <div id="trackerSection">
+            <h1>🚬🍺 Consumption Tracker</h1>
+
+            <div class="input-section">
+                <label>Cigarettes Smoked:</label>
+                <input type="number" id="cigarettes" placeholder="Enter count">
+
+                <label>Price per Cigarette (₹):</label>
+                <input type="number" id="cigarettePrice" placeholder="Enter price">
+
+                <label>Alcohol Consumed (Drinks):</label>
+                <input type="number" id="alcohol" placeholder="Enter count">
+
+                <label>Price per Drink (₹):</label>
+                <input type="number" id="alcoholPrice" placeholder="Enter price">
+
+                <button onclick="logConsumption()" class="log-btn">Log Consumption</button>
+            </div>
+
+            <div class="quote-box">
+                <div id="quoteDisplay">Loading quote...</div>
+            </div>
+
+            <div class="stats">
+                <h2>📊 Your Stats:</h2>
+                <p><strong>Total Cigarettes:</strong> <span id="totalCigarettes">0</span></p>
+                <p><strong>Total Alcohol Drinks:</strong> <span id="totalAlcohol">0</span></p>
+                <p><strong>Total Spent (₹):</strong> ₹<span id="totalSpent">0.00</span></p>
+            </div>
+
+            <div class="progress-container">
+                <p id="progressText">Goal: Reduce Smoking & Drinking</p>
+                <div class="progress-bar">
+                    <div id="progressFill"></div>
+                </div>
+            </div>
+
+            <button onclick="resetData()" class="reset-btn">Reset Data</button>
+        </div>
+        <div id="calendarSection" style="display: none;">
+            <h1>📅 Consumption Calendar</h1>
+            <div id="calendar"></div>
+        </div>
+        <div id="goalPopup" class="popup">
+            <div class="popup-content">
+                <h2>🎯 Set Your Goal</h2>
+                <label>Cigarettes per Day:</label>
+                <input type="number" id="goalCigarettes" placeholder="Enter goal">
+                <br>
+                <br>
+                <label>Drinks per Day:</label>
+                <input type="number" id="goalAlcohol" placeholder="Enter goal">
+                <br>
+                <button onclick="setGoal()" class="log-btn">Save Goal</button>
+                <button onclick="closeGoalPopup()" class="reset-btn">Cancel</button>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
